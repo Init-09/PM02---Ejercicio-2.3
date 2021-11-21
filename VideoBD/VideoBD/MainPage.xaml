@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:media1="clr-namespace:MediaManager.Forms;assembly=MediaManager.Forms"
+             x:Class="VideoBD.MainPage"
+             Title="Tomar Video">
+
+    <ScrollView Grid.Row="1">
+        <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+
+            <media1:VideoView x:Name="video" AutoPlay="False" ShowControls="True" WidthRequest ="320" HeightRequest="202"/>
+            
+            <Entry 
+                    x:Name="nombre"
+                    Margin="0,20,0,0" Placeholder="Nombre"
+                    TextColor="black"/>
+            <Entry 
+                    x:Name="descrip"
+                    Margin="0,5,0,0" Placeholder="Descripcion"
+                    TextColor="black"/>
+            <Button x:Name="TakeVideo" Clicked="TakeVideo_Clicked"
+                     Text="Tomar Video"
+                    CornerRadius="190"
+                    Margin="0,10,0,0"
+                    BackgroundColor="RoyalBlue"
+                    TextColor="White"></Button>
+
+            <Button x:Name="btnver" IsVisible="true" Clicked="btnver_Clicked"
+                    CornerRadius="190"
+                    Margin="0,10,0,0"
+                    BackgroundColor="RoyalBlue"
+                    TextColor="White"
+                    Text="Ver Videos"></Button>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
